@@ -8,5 +8,10 @@ public class PizzaHut {
 		ApplicationContext context = new ClassPathXmlApplicationContext("springdemonew/beans.xml");
 		Pizza p = (Pizza) context.getBean("pizza");
 		p.displayPizza();
+		System.out.println(p);
+		
+		Pizza p2 = (Pizza) context.getBean("pizza2");
+		p.displayPizza();
+		System.out.println(p2);
 	}
 }

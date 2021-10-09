@@ -4,6 +4,17 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
 
 	<!-- Pizza p = new Pizza(); -->
-	<bean class="springdemonew.Pizza" id="pizza"></bean>
+	<bean class="springdemonew.Pizza" id="pizza">
+		<property name="name" value="Tandoori Paneer"></property>
+		<property name="category" value="Veg"></property>
+		<property name="crust" value="Double Chesse"></property>
+		<property name="cost" value="350"></property>
+	</bean>
+	<bean class="springdemonew.Pizza" id="pizza2">
+		<property name="name" value="Margerta"></property>
+		<property name="category" value="Veg"></property>
+		<property name="crust" value="Double Chesse"></property>
+		<property name="cost" value="250"></property>
+	</bean>	
 	
 </beans>
