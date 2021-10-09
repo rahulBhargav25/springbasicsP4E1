@@ -17,4 +17,30 @@
 		<property name="cost" value="250"></property>
 	</bean>	
 	
+	<bean class="springdemonew.Drink" id="drink1">
+		<constructor-arg name="name" value="pepsi"></constructor-arg>
+		<constructor-arg name="category" value="Cold-Drink"></constructor-arg>
+		<constructor-arg name="cost" value="100"></constructor-arg>
+	</bean>
+	<bean class="springdemonew.Drink" id="drink2">
+		<constructor-arg name="name" value="coke"></constructor-arg>
+		<constructor-arg name="category" value="Cold-Drink"></constructor-arg>
+		<constructor-arg name="cost" value="100"></constructor-arg>
+	</bean>
+	<bean class="springdemonew.Meal" id="meal1">
+		<property name="pizza" ref="pizza"></property>
+		<property name="drink" ref="drink2"></property>
+	</bean>
+	<bean class="springdemonew.Meal" id="meal2">
+		<property name="pizza" ref="pizza2"></property>
+		<property name="drink" ref="drink1"></property>
+	</bean>	
+	<bean class="springdemonew.Meal" id="meal3">
+		<property name="pizza" ref="pizza"></property>
+		<property name="drink" ref="drink1"></property>
+	</bean>
+	<bean class="springdemonew.Meal" id="meal4">
+		<property name="pizza" ref="pizza2"></property>
+		<property name="drink" ref="drink2"></property>
+	</bean>		
 </beans>

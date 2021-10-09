@@ -22,6 +22,7 @@ public class Pizza {
 
 	public void setName(String name) {
 		this.name = name;
+		System.out.println("1set");
 	}
 
 	public String getCategory() {
