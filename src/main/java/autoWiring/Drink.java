@@ -1,15 +1,15 @@
-package springdemonew;
+package autoWiring;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Component
+
 public class Drink {
-	@Value("Coke")
+
 	private String name;
-	@Value("Soft Drink")
+
 	private String category;
-	@Value("100")
+
 	private double cost;
 	
 	public Drink() {
