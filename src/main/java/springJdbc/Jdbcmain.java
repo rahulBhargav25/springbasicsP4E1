@@ -8,8 +8,11 @@ public class Jdbcmain {
 		ApplicationContext context = new ClassPathXmlApplicationContext("springJdbc/beans.xml");
 		CustomerDaoImpl daoImpl = (CustomerDaoImpl) context.getBean("customerDaoImpl");
 		
-		Customer customer = new Customer(2, "ramlal", "pune");
-		daoImpl.addCutomer(customer);
+		//Customer customer = new Customer(2, "ramlal", "pune");
+		//daoImpl.addCutomer(customer);
+		
+		
+		System.out.println(daoImpl.getAllCustomers());
 	
 	
 	}
