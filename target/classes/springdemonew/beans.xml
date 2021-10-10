@@ -1,46 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
-	<!-- Pizza p = new Pizza(); -->
-	<bean class="springdemonew.Pizza" id="pizza">
-		<property name="name" value="Tandoori Paneer"></property>
-		<property name="category" value="Veg"></property>
-		<property name="crust" value="Double Chesse"></property>
-		<property name="cost" value="350"></property>
-	</bean>
-	<bean class="springdemonew.Pizza" id="pizza2">
-		<property name="name" value="Margerta"></property>
-		<property name="category" value="Veg"></property>
-		<property name="crust" value="Double Chesse"></property>
-		<property name="cost" value="250"></property>
-	</bean>	
-	
-	<bean class="springdemonew.Drink" id="drink1">
-		<constructor-arg name="name" value="pepsi"></constructor-arg>
-		<constructor-arg name="category" value="Cold-Drink"></constructor-arg>
-		<constructor-arg name="cost" value="100"></constructor-arg>
-	</bean>
-	<bean class="springdemonew.Drink" id="drink2">
-		<constructor-arg name="name" value="coke"></constructor-arg>
-		<constructor-arg name="category" value="Cold-Drink"></constructor-arg>
-		<constructor-arg name="cost" value="100"></constructor-arg>
-	</bean>
-	<bean class="springdemonew.Meal" id="meal1">
-		<property name="pizza" ref="pizza"></property>
-		<property name="drink" ref="drink2"></property>
-	</bean>
-	<bean class="springdemonew.Meal" id="meal2">
-		<property name="pizza" ref="pizza2"></property>
-		<property name="drink" ref="drink1"></property>
-	</bean>	
-	<bean class="springdemonew.Meal" id="meal3">
-		<property name="pizza" ref="pizza"></property>
-		<property name="drink" ref="drink1"></property>
-	</bean>
-	<bean class="springdemonew.Meal" id="meal4">
-		<property name="pizza" ref="pizza2"></property>
-		<property name="drink" ref="drink2"></property>
-	</bean>		
+	<context:component-scan base-package="springdemonew"></context:component-scan>
+
 </beans>

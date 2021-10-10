@@ -1,9 +1,17 @@
 package springdemonew;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component(value="pizza1")
 public class Pizza {
+	@Value("manchu")
 	private String name;
+	@Value("Veg")
 	private String category;
+	@Value("Panner")
 	private String crust;
+	@Value("250")
 	private double cost;
 	
 	public Pizza() {

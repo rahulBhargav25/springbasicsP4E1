@@ -1,9 +1,17 @@
 package springdemonew;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Drink {
 	private String name;
 	private String category;
 	private double cost;
+	
+	public Drink() {
+		System.out.println("Drink is being prepared");
+	}
+	
 	public Drink(String name, String category, double cost) {
 		super();
 		this.name = name;
