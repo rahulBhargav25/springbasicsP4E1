@@ -11,5 +11,8 @@ public class PizzaHut {
 		
 		Customer c1 = (Customer) context.getBean("customer1");
 		System.out.println(c1);
+		
+		Order o1 =  context.getBean(Order.class);
+		System.out.println(o1);
 	}
 }
