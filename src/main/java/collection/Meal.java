@@ -2,12 +2,12 @@ package collection;
 
 import org.springframework.stereotype.Component;
 
-@Component
+
 public class Meal {
 	private Pizza pizza;
 	private Drink drink;
 	
-	public Meal() {System.out.println("Meal is being prepared");}
+	
 	public Pizza getPizza() {
 		return pizza;
 	}

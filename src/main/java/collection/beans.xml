@@ -3,8 +3,10 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
 	
 	<!-- Pizza p = new Pizza(); -->
 	<bean class="collection.Pizza" id="pizza1">
@@ -44,9 +46,21 @@
 		<property name="customerName" value="Rahul Bhargav"></property>
 		<property name="address">
 			<set>
-				<value>ABC apt, Delhi</value>
+				<value>ABC apt Delhi</value>
 				<value>XYZ ville</value>
 			</set>
+		</property>
+		<property name="specificAddress">
+			<map>
+				<entry key="Home" value="ABC apt, Delhi"></entry>
+				<entry key="Office" value="XYZ ville"></entry>
+			</map>
+		</property>
+		<property name="orders">
+			<map>
+				<entry key="1" value-ref="order1"></entry>
+				<entry key="2" value-ref="order2"></entry>
+			</map>
 		</property>
 	</bean>
 		<bean class="collection.Drink" id="drink1">
@@ -82,5 +96,19 @@
 			</list>
 		</property>
 	</bean>
-
+	<bean class="collection.Order" id="order2">
+		<property name="orderid" value="102"></property>
+		<property name="meals">
+			<list>
+				<ref bean="meal1"/>
+				<ref bean="meal2"/>
+			</list>
+		</property>
+	</bean>
+	
+	<!--  <util:list id="mylist" list-class="java.util.ArrayList">
+		<value>one</value>
+		<value>Two</value>
+		<val
+	</util:list>-->
 </beans>

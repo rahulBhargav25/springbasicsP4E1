@@ -26,9 +26,7 @@ public class Pizza {
 		this.topping = topping;
 	}
 
-	public Pizza() {
-		System.out.println("Pizza by alfredo is being prepared and wii be ready soon ..");
-	}
+
 	
 	public void displayPizza() {
 		System.out.println("this is pizza");
